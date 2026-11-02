@@ -1,0 +1,148 @@
+//1st element of the list
+
+List<Integer> list = Arrays.asList(10, 20, 30, 40, 50);
+
+        if (!list.isEmpty()) {
+            System.out.println("First element: " + list.get(0));
+        }
+
+
+//total nums of element in list
+
+List<Integer> list = Arrays.asList(10, 20, 30, 40, 50);
+
+        int count = 0;
+        for (Integer n : list) {
+            count++;
+        }
+        System.out.println("Total elements: " + count);
+
+//frequency of elements--------------------------------------------------------
+
+List<Integer> list =
+                Arrays.asList(10, 20, 10, 30, 20, 10);
+
+        Map<Integer, Integer> map = new HashMap<>();
+        for (Integer n : list) {
+
+            if (map.containsKey(n)) {
+                map.put(n, map.get(n) + 1);
+            } else {
+                map.put(n, 1);
+            }
+        }
+        System.out.println(map);
+
+
+
+//find max value
+
+ List<Integer> list =
+                Arrays.asList(10, 50, 20, 90, 30);
+        int max = list.get(0);
+        for (Integer n : list) {
+            if (n > max) {
+                max = n;
+            }
+        }
+        System.out.println("Maximum: " + max);
+
+
+
+
+//1st non repeated character in a string
+
+ String str = "swiss";
+
+        Map<Character, Integer> map = new LinkedHashMap<>();
+
+        //<<<<<<< Count characters>>>>>
+
+
+        for (char ch : str.toCharArray()) {
+            if (map.containsKey(ch)) {
+                map.put(ch, map.get(ch) + 1);
+            } else {
+                map.put(ch, 1);
+            }
+        }
+
+        // Find first character having count 1>>>>>>>>>>>>
+
+
+        for (char ch : str.toCharArray()) 
+        {
+            if (map.get(ch) == 1) 
+            {
+                System.out.println("First non-repeated: " + ch);
+                break;
+            }
+        }
+    
+
+    //first repeated character
+
+     String str = "swiss";
+
+        Set<Character> set = new HashSet<>();
+
+        for (char ch : str.toCharArray()) {
+
+            if (set.contains(ch)) {
+                System.out.println("First repeated: " + ch);
+                break;
+            }
+
+            set.add(ch);
+        }
+
+
+//sort values in ascending order
+
+List<Integer> list = new ArrayList<>(Arrays.asList(50, 10, 40, 20, 30));
+        Collections.sort(list);
+        System.out.println(list);
+
+
+//SORT IN descending order
+
+List<Integer> list = new ArrayList<>(Arrays.asList(50, 10, 40, 20, 30));
+        Collections.sort(list, Collections.reverseOrder());
+        System.out.println(list);
+
+
+//check for dupicates
+
+ int[] nums = {1, 2, 3, 4, 2};
+        Set<Integer> set = new HashSet<>();
+        boolean duplicate = false;
+        for (int n : nums) {
+            if (set.contains(n)) {
+                duplicate = true;
+                break;
+            }
+            set.add(n);
+        }
+        System.out.println(duplicate);
+
+
+
+
+//concatinate 2 streams
+
+        List<Integer> list1 = Arrays.asList(1, 2, 3);
+        List<Integer> list2 = Arrays.asList(4, 5, 6);
+
+        List<Integer> result = new ArrayList<>();
+
+        for (Integer n : list1) {
+            result.add(n);
+        }
+        for (Integer n : list2) {
+            result.add(n);
+        }
+        System.out.println(result);
+
+
+
+predicate function interface
